@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Demo web de ACM Diproyec: diseño, ingeniería, construcción, supervisión y productos para construcción."
+    />
+    <title>ACM Diproyec | Construcción, ingeniería y proyectos</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#contenido">Ir al contenido principal</a>
+
+    <header class="site-header" id="inicio">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="ACM Diproyec, ir al inicio">
+          <span class="brand-mark" aria-hidden="true">A</span>
+          <span>
+            <strong>ACM DIPROYEC</strong>
+            <small>Construcción · Ingeniería · Proyectos</small>
+          </span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-controls="main-menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="main-nav" id="main-menu" aria-label="Navegación principal">
+          <a href="#inicio">Inicio</a>
+          <a href="#construye">Construye tu casa</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#productos">Productos</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <a
+          class="button button-primary header-cta"
+          href="https://wa.me/51986635347?text=Hola%20ACM%20Diproyec,%20quisiera%20cotizar%20un%20proyecto."
+          target="_blank"
+          rel="noreferrer"
+        >Cotiza por WhatsApp</a>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" id="construye">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Tu proyecto, de principio a fin</span>
+            <h1>Construimos tu casa desde los planos hasta la <em>entrega final</em></h1>
+            <p>
+              Diseño, construcción y supervisión integral para que disfrutes tu hogar
+              sin complicaciones.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="button button-primary"
+                href="https://wa.me/51986635347?text=Hola%20ACM%20Diproyec,%20quisiera%20cotizar%20mi%20proyecto."
+                target="_blank"
+                rel="noreferrer"
+              >Cotizar mi proyecto</a>
+              <a class="button button-outline" href="#servicios">Ver servicios</a>
+            </div>
+            <ul class="hero-tags" aria-label="Especialidades">
+              <li>Diseño</li>
+              <li>Ingeniería</li>
+              <li>Construcción</li>
+              <li>Supervisión</li>
+            </ul>
+          </div>
+
+          <div class="media-placeholder hero-media" role="img" aria-label="Espacio reservado para una imagen de vivienda moderna">
+            <span>Imagen principal del proyecto</span>
+            <small>Vivienda moderna / render arquitectónico</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="servicios">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Soluciones integrales</span>
+            <h2>Todo lo que necesitas para construir con confianza</h2>
+            <p>Un solo equipo para acompañarte desde la primera idea hasta la entrega de tu obra.</p>
+          </div>
+
+          <div class="card-grid four-columns">
+            <article class="info-card">
+              <span class="icon" aria-hidden="true">⌑</span>
+              <h3>Diseño de planos</h3>
+              <p>Diseños arquitectónicos y estructurales a medida, funcionales y modernos.</p>
+            </article>
+            <article class="info-card">
+              <span class="icon" aria-hidden="true">S/</span>
+              <h3>Presupuesto claro</h3>
+              <p>Cotizaciones detalladas y transparentes para tomar decisiones con confianza.</p>
+            </article>
+            <article class="info-card">
+              <span class="icon" aria-hidden="true">♜</span>
+              <h3>Construcción profesional</h3>
+              <p>Ejecución con mano de obra calificada, materiales de calidad y orden en obra.</p>
+            </article>
+            <article class="info-card">
+              <span class="icon" aria-hidden="true">✓</span>
+              <h3>Supervisión de obra</h3>
+              <p>Control técnico permanente para asegurar calidad, tiempo y seguridad.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted" aria-labelledby="proceso-title">
+        <div class="container">
+          <div class="section-heading compact">
+            <span class="eyebrow">Paso a paso</span>
+            <h2 id="proceso-title">¿Cómo trabajamos?</h2>
+          </div>
+
+          <ol class="process-list">
+            <li><strong>Idea</strong><span>Escuchamos tus necesidades.</span></li>
+            <li><strong>Planos</strong><span>Diseñamos tu proyecto.</span></li>
+            <li><strong>Presupuesto</strong><span>Definimos costos y alcance.</span></li>
+            <li><strong>Construcción</strong><span>Ejecutamos la obra.</span></li>
+            <li><strong>Supervisión</strong><span>Controlamos cada etapa.</span></li>
+            <li><strong>Entrega</strong><span>Recibes tu casa terminada.</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="productos">
+        <div class="container">
+          <div class="section-heading row-heading">
+            <div>
+              <span class="eyebrow">Catálogo</span>
+              <h2>Productos estrella</h2>
+            </div>
+            <p>Soluciones para obras seguras, resistentes y eficientes.</p>
+          </div>
+
+          <div class="card-grid four-columns product-grid">
+            <article class="product-card featured">
+              <span class="badge">Más vendido</span>
+              <div class="media-placeholder product-media"><span>Imagen del producto</span></div>
+              <div class="product-content">
+                <h3>Dados separadores de concreto</h3>
+                <p>Aseguran el recubrimiento y la durabilidad del acero de refuerzo.</p>
+                <ul class="sizes"><li>2 cm</li><li>3 cm</li><li>5 cm</li></ul>
+                <a class="button button-outline button-small" href="#contacto">Consultar</a>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="media-placeholder product-media"><span>Imagen del producto</span></div>
+              <div class="product-content">
+                <h3>Escantillones de concreto</h3>
+                <p>Soporte resistente para mallas y acero de refuerzo.</p>
+                <a class="button button-outline button-small" href="#contacto">Consultar</a>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="media-placeholder product-media"><span>Imagen del producto</span></div>
+              <div class="product-content">
+                <h3>Concreto premezclado</h3>
+                <p>Concreto de alta resistencia con dosificación controlada.</p>
+                <a class="button button-outline button-small" href="#contacto">Consultar</a>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="media-placeholder product-media"><span>Imagen del producto</span></div>
+              <div class="product-content">
+                <h3>Aditivos e insumos</h3>
+                <p>Productos que mejoran el rendimiento y acabado de tu obra.</p>
+                <a class="button button-outline button-small" href="#contacto">Consultar</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="proyectos">
+        <div class="container">
+          <div class="section-heading row-heading">
+            <div>
+              <span class="eyebrow">Portafolio</span>
+              <h2>Proyectos destacados</h2>
+            </div>
+            <p>Espacios preparados para incorporar las fotografías reales de cada obra.</p>
+          </div>
+
+          <div class="card-grid three-columns">
+            <article class="project-card">
+              <div class="media-placeholder project-media"><span>Fotografía del proyecto</span></div>
+              <div><h3>Residencia La Planicie</h3><p>Carabayllo, Lima</p><span>240 m²</span></div>
+            </article>
+            <article class="project-card">
+              <div class="media-placeholder project-media"><span>Fotografía del proyecto</span></div>
+              <div><h3>Casa Sol de Carabayllo</h3><p>Carabayllo, Lima</p><span>180 m²</span></div>
+            </article>
+            <article class="project-card">
+              <div class="media-placeholder project-media"><span>Fotografía del proyecto</span></div>
+              <div><h3>Casa Horizonte</h3><p>Carabayllo, Lima</p><span>200 m²</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="nosotros">
+        <div class="container about-grid">
+          <div>
+            <span class="eyebrow">ACM Diproyec</span>
+            <h2>Construimos el futuro contigo</h2>
+            <p>
+              Somos una empresa peruana dedicada al diseño, la ingeniería, la construcción y la
+              supervisión de proyectos. Integramos experiencia técnica y atención personalizada
+              para convertir cada idea en una obra sólida y funcional.
+            </p>
+            <ul class="check-list">
+              <li>Asesoría personalizada</li>
+              <li>Equipo técnico especializado</li>
+              <li>Control de calidad en cada etapa</li>
+            </ul>
+          </div>
+          <div class="media-placeholder about-media"><span>Imagen del equipo o de una obra</span></div>
+        </div>
+      </section>
+
+      <section class="contact-banner" id="contacto">
+        <div class="container contact-banner-inner">
+          <div>
+            <span class="eyebrow">Hablemos de tu proyecto</span>
+            <h2>¿Listo para construir tu nuevo hogar?</h2>
+            <p>Recibe asesoría personalizada y una cotización sin compromiso.</p>
+          </div>
+          <a
+            class="button button-dark"
+            href="https://wa.me/51986635347?text=Hola%20ACM%20Diproyec,%20quiero%20información%20sobre%20un%20proyecto."
+            target="_blank"
+            rel="noreferrer"
+          >Cotiza por WhatsApp</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand brand-light" href="#inicio">
+            <span class="brand-mark" aria-hidden="true">A</span>
+            <span><strong>ACM DIPROYEC</strong><small>Construyendo el futuro</small></span>
+          </a>
+          <p>Construcción · Ingeniería · Proyectos</p>
+        </div>
+        <div>
+          <h3>Contacto</h3>
+          <ul class="footer-list">
+            <li><a href="tel:+51986635347">+51 986 635 347</a></li>
+            <li><a href="mailto:a.contreras@acmdiproyec.pe">a.contreras@acmdiproyec.pe</a></li>
+            <li>Urb. Planicie 2 - Mz. AS Lote 33<br />Carabayllo, Lima</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Síguenos</h3>
+          <ul class="footer-list">
+            <li><a href="#" aria-label="Facebook de ACM Diproyec">Facebook</a></li>
+            <li><a href="#" aria-label="Instagram de ACM Diproyec">Instagram</a></li>
+            <li><a href="https://wa.me/51986635347" target="_blank" rel="noreferrer">WhatsApp</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Horario de atención</h3>
+          <p>Lunes a viernes<br />8:00 a. m. – 6:00 p. m.</p>
+          <p>Sábados<br />8:00 a. m. – 1:00 p. m.</p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© <span id="current-year">2026</span> ACM Diproyec S.A.C. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <a
+      class="floating-whatsapp"
+      href="https://wa.me/51986635347?text=Hola%20ACM%20Diproyec,%20quisiera%20más%20información."
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Contactar a ACM Diproyec por WhatsApp"
+    >WA</a>
+  </body>
+</html>
