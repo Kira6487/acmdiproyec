@@ -8,8 +8,15 @@
   box-shadow: 0 12px 30px rgba(25, 28, 30, 0.055);
 }
 
+.product-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
 .product-card.featured {
-  border: 2px solid var(--yellow);
+  border-color: var(--yellow);
+  box-shadow: inset 0 0 0 1px var(--yellow), 0 12px 30px rgba(25, 28, 30, 0.055);
 }
 
 .badge {
@@ -26,15 +33,23 @@
 }
 
 .product-media {
-  min-height: 210px;
+  display: flex;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   border: 0;
   border-bottom: 1px solid var(--line);
   border-radius: 0;
+  background: var(--soft);
 }
 
 .product-content {
   display: flex;
-  min-height: 240px;
+  min-height: 260px;
+  flex: 1;
   flex-direction: column;
   align-items: flex-start;
   padding: 24px;
@@ -47,6 +62,8 @@
 
 .sizes {
   display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
   margin: 15px 0 20px;
   padding: 0;
   gap: 8px;
@@ -54,6 +71,7 @@
 }
 
 .sizes li {
+  flex: 0 0 auto;
   padding: 3px 8px;
   border: 1px solid var(--yellow);
   border-radius: 6px;
