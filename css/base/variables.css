@@ -1,0 +1,14 @@
+:root {
+  --yellow: #f5b400;
+  --yellow-dark: #d89d00;
+  --ink: #17191b;
+  --muted: #666b70;
+  --line: #e4e5e7;
+  --surface: #ffffff;
+  --soft: #f5f5f3;
+  --dark: #232628;
+  --green: #20b958;
+  --radius: 18px;
+  --shadow: 0 14px 34px rgba(25, 28, 30, 0.09);
+  --container: 1180px;
+}

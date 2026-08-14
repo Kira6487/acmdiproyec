@@ -1,0 +1,49 @@
+.card-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.four-columns {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.info-card {
+  padding: 30px 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: white;
+  box-shadow: 0 12px 30px rgba(25, 28, 30, 0.055);
+  text-align: center;
+}
+
+.info-card .icon {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  place-items: center;
+  border: 2px solid var(--ink);
+  border-radius: 15px;
+  background: var(--yellow);
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.info-card h3,
+.product-card h3,
+.project-card h3 {
+  margin: 0 0 7px;
+  line-height: 1.18;
+}
+
+.info-card p,
+.product-card p,
+.project-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}

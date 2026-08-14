@@ -1,0 +1,42 @@
+.about-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+.about-grid p {
+  color: var(--muted);
+  font-size: 1.03rem;
+}
+
+.about-media {
+  min-height: 390px;
+}
+
+.check-list {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.check-list li {
+  position: relative;
+  margin-top: 10px;
+  padding-left: 32px;
+  font-weight: 700;
+}
+
+.check-list li::before {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  display: grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--yellow);
+  content: "✓";
+  font-size: 0.8rem;
+}

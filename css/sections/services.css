@@ -1,0 +1,47 @@
+.process-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  counter-reset: step;
+  gap: 14px;
+  grid-template-columns: repeat(6, 1fr);
+  list-style: none;
+}
+
+.process-list li {
+  position: relative;
+  min-height: 150px;
+  padding: 54px 15px 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: white;
+  text-align: center;
+}
+
+.process-list li::before {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: var(--yellow);
+  content: counter(step);
+  counter-increment: step;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.process-list strong,
+.process-list span {
+  display: block;
+}
+
+.process-list span {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}

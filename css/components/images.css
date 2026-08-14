@@ -1,0 +1,27 @@
+.media-placeholder {
+  display: grid;
+  overflow: hidden;
+  min-height: 200px;
+  place-content: center;
+  border: 1px dashed #b7babd;
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(245, 180, 0, 0.1), rgba(255, 255, 255, 0.4)),
+    repeating-linear-gradient(-45deg, #ececea 0 14px, #f4f4f2 14px 28px);
+  color: #666a6d;
+  text-align: center;
+}
+
+.media-placeholder span {
+  font-weight: 800;
+}
+
+.media-placeholder small {
+  display: block;
+  margin-top: 5px;
+}
+
+.hero-media {
+  min-height: 470px;
+  box-shadow: var(--shadow);
+}

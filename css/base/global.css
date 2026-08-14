@@ -1,0 +1,86 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  color: var(--ink);
+  background: var(--surface);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.55;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.container {
+  width: min(calc(100% - 40px), var(--container));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 999;
+  padding: 10px 16px;
+  transform: translateY(-150%);
+  border-radius: 8px;
+  background: var(--ink);
+  color: white;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.section {
+  padding-block: 92px;
+}
+
+.section-muted {
+  position: relative;
+  background:
+    linear-gradient(rgba(245, 245, 243, 0.93), rgba(245, 245, 243, 0.93)),
+    url("../../images/texturaconcreto.jpeg") center / 420px auto repeat;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.75), inset 0 -1px rgba(23, 25, 27, 0.05);
+}
+
+.section-heading {
+  max-width: 720px;
+  margin: 0 auto 44px;
+  text-align: center;
+}
+
+.section-heading.compact {
+  margin-bottom: 34px;
+}
+
+.section-heading h2,
+.about-grid h2,
+.contact-banner h2 {
+  margin: 0.25rem 0 0.65rem;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.row-heading {
+  display: flex;
+  max-width: none;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  text-align: left;
+}
+
+.row-heading p {
+  max-width: 390px;
+  text-align: right;
+}

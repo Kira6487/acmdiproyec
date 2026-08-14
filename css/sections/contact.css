@@ -1,0 +1,25 @@
+.contact-banner {
+  padding-block: 58px;
+  background:
+    linear-gradient(110deg, rgba(245, 180, 0, 0.94), rgba(255, 201, 56, 0.9)),
+    url("../../images/texturaconcreto.jpeg") center 42% / 520px auto repeat;
+}
+
+.contact-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.contact-banner .eyebrow {
+  color: #342600;
+}
+
+.contact-banner h2 {
+  margin-bottom: 6px;
+}
+
+.contact-banner p {
+  margin: 0;
+}

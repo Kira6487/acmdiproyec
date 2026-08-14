@@ -1,0 +1,22 @@
+.project-media {
+  min-height: 230px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+}
+
+.project-card > div:last-child {
+  position: relative;
+  padding: 20px 78px 20px 20px;
+}
+
+.project-card > div:last-child > span {
+  position: absolute;
+  top: 22px;
+  right: 18px;
+  padding: 5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
