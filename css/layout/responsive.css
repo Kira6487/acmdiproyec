@@ -36,16 +36,20 @@
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    transform: translateX(100%);
+    width: 100%;
+    max-width: 100%;
+    clip-path: inset(0 0 0 100%);
     background: white;
     opacity: 0;
-    transition: transform 200ms ease, opacity 200ms ease, visibility 200ms;
+    pointer-events: none;
+    transition: clip-path 200ms ease, opacity 200ms ease, visibility 200ms;
   }
 
   .main-nav.open {
     visibility: visible;
-    transform: translateX(0);
+    clip-path: inset(0);
     opacity: 1;
+    pointer-events: auto;
   }
 
   .main-nav a {
@@ -87,6 +91,18 @@
 @media (max-width: 620px) {
   .container {
     width: min(calc(100% - 28px), var(--container));
+  }
+
+  .header-inner {
+    gap: 12px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand > span {
+    min-width: 0;
   }
 
   .brand strong {
@@ -145,6 +161,15 @@
     grid-template-columns: 1fr;
   }
 
+  .footer-grid {
+    text-align: center;
+  }
+
+  .footer-logo-link {
+    width: 160px;
+    margin-inline: auto;
+  }
+
   .hero-actions .button,
   .contact-banner .button {
     width: 100%;
@@ -161,6 +186,30 @@
   .floating-whatsapp {
     right: 14px;
     bottom: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-inner {
+    gap: 8px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-logo-header {
+    width: 46px;
+    height: 46px;
+    flex-basis: 46px;
+  }
+
+  .brand strong {
+    font-size: 0.88rem;
+  }
+
+  .brand small {
+    font-size: 0.52rem;
   }
 }
 

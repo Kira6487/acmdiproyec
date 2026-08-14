@@ -25,6 +25,7 @@
 .footer-logo-link {
   display: block;
   width: min(100%, 190px);
+  aspect-ratio: 1 / 1;
   padding: 8px;
   border-radius: 16px;
   background: white;
@@ -33,9 +34,9 @@
 
 .brand-logo-footer {
   width: 100%;
-  aspect-ratio: 1;
+  height: 100%;
   border-radius: 10px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .footer-grid h3 {
@@ -57,6 +58,10 @@
 
 .footer-list a:hover {
   color: var(--yellow);
+}
+
+.footer-list a {
+  overflow-wrap: anywhere;
 }
 
 .footer-bottom {

@@ -26,7 +26,7 @@
   height: 58px;
   flex: 0 0 58px;
   border-radius: 10px;
-  object-fit: cover;
+  object-fit: contain;
   box-shadow: 0 5px 14px rgba(23, 25, 27, 0.1);
 }
 
