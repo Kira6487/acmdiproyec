@@ -20,8 +20,3 @@
   display: block;
   margin-top: 5px;
 }
-
-.hero-media {
-  min-height: 470px;
-  box-shadow: var(--shadow);
-}

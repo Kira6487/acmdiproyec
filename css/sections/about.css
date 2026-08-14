@@ -1,42 +1,59 @@
 .about-grid {
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.9fr 1.1fr;
   gap: 70px;
 }
 
-.about-grid p {
+.about-copy > p:last-child {
+  margin: 24px 0 0;
   color: var(--muted);
   font-size: 1.03rem;
 }
 
-.about-media {
-  min-height: 390px;
+.about-copy h3 {
+  margin: 1.8rem 0 0.2rem;
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+  line-height: 1.15;
 }
 
-.check-list {
-  margin: 24px 0 0;
-  padding: 0;
-  list-style: none;
+.about-role {
+  margin: 0;
+  color: #765600;
+  font-size: 0.95rem;
+  font-weight: 850;
 }
 
-.check-list li {
+.about-experience {
+  margin: 8px 0 0;
+  font-weight: 750;
+}
+
+.about-gallery {
   position: relative;
-  margin-top: 10px;
-  padding-left: 32px;
-  font-weight: 700;
+  min-width: 0;
+  min-height: 540px;
 }
 
-.check-list li::before {
+.about-photo {
+  display: block;
+  border-radius: var(--radius);
+  background: var(--soft);
+  box-shadow: var(--shadow);
+  object-fit: cover;
+}
+
+.about-portrait {
+  width: min(68%, 350px);
+  aspect-ratio: 2 / 3;
+  object-position: center top;
+}
+
+.about-work {
   position: absolute;
-  top: 1px;
-  left: 0;
-  display: grid;
-  width: 22px;
-  height: 22px;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--yellow);
-  content: "✓";
-  font-size: 0.8rem;
+  right: 0;
+  bottom: 18px;
+  width: 66%;
+  aspect-ratio: 16 / 9;
+  border: 7px solid white;
 }

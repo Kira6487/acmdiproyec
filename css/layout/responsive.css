@@ -10,10 +10,6 @@
   .four-columns {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .process-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 @media (max-width: 900px) {
@@ -68,18 +64,23 @@
     padding-block: 64px;
   }
 
-  .hero-media {
-    min-height: 360px;
-  }
-
   .three-columns,
-  .about-grid,
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .about-grid {
+    grid-template-columns: 1fr;
     gap: 36px;
+  }
+
+  .about-copy {
+    max-width: 720px;
+  }
+
+  .about-gallery {
+    width: min(100%, 680px);
+    min-height: 500px;
   }
 
   .contact-banner-inner {
@@ -155,7 +156,6 @@
 
   .four-columns,
   .three-columns,
-  .process-list,
   .about-grid,
   .footer-grid {
     grid-template-columns: 1fr;
@@ -179,8 +179,22 @@
     min-height: 220px;
   }
 
-  .about-media {
-    min-height: 280px;
+  .about-gallery {
+    display: grid;
+    min-height: 0;
+  }
+
+  .about-portrait {
+    width: min(82%, 330px);
+  }
+
+  .about-work {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: min(86%, 390px);
+    margin-top: -46px;
+    margin-left: auto;
   }
 
   .floating-whatsapp {
