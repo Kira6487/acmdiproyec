@@ -17,20 +17,29 @@
 }
 
 @media (max-width: 900px) {
+  .site-header {
+    z-index: 1100;
+    isolation: isolate;
+  }
+
+  body.menu-open .site-header {
+    background-color: var(--surface);
+    backdrop-filter: none;
+  }
+
   .header-inner {
     min-height: 70px;
   }
 
   .menu-toggle {
+    z-index: 1102;
     display: block;
   }
 
   .main-nav {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    bottom: auto;
-    left: auto;
+    position: fixed;
+    inset: 70px 0 0 auto;
+    z-index: 1101;
     display: flex;
     visibility: hidden;
     flex-direction: column;
@@ -38,28 +47,37 @@
     gap: 0;
     width: min(100%, 390px);
     max-width: 100%;
-    height: calc(100dvh - 70px);
+    height: auto;
     overflow-y: auto;
     clip-path: inset(0 0 0 100%);
-    background:
-      linear-gradient(rgba(255, 253, 250, 0.97), rgba(255, 253, 250, 0.97)),
-      url("../../images/texturaconcreto.jpeg") center / cover;
-    box-shadow: -16px 20px 34px rgba(23, 25, 27, 0.16);
-    opacity: 0;
+    background-color: #202426;
+    background-image:
+      linear-gradient(rgba(32, 36, 38, 0.985), rgba(32, 36, 38, 0.985)),
+      url("../../images/texturaconcreto.jpeg");
+    background-position: center;
+    background-size: cover;
+    box-shadow: -18px 24px 44px rgba(10, 12, 13, 0.32);
+    color: white;
+    opacity: 1;
     pointer-events: none;
-    transition: clip-path 260ms ease, opacity 220ms ease, visibility 220ms;
+    transition: clip-path 260ms ease, visibility 0s linear 260ms;
   }
 
   .main-nav.open {
+    z-index: 1101;
     visibility: visible;
     clip-path: inset(0);
+    background-color: #202426;
+    color: white;
     opacity: 1;
     pointer-events: auto;
+    transition-delay: 0s;
   }
 
   .main-nav a {
     padding: 17px 24px;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    color: white;
     font-size: 1rem;
   }
 
@@ -86,12 +104,13 @@
     margin: 18px 24px;
     padding: 0.72rem 1.25rem;
     border: 2px solid transparent;
+    color: var(--ink);
   }
 
   .menu-backdrop {
     position: fixed;
     inset: 70px 0 0;
-    z-index: 90;
+    z-index: 1000;
     display: block;
     visibility: hidden;
     border: 0;
