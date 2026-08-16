@@ -1,7 +1,7 @@
 window.ACMDiproyec = window.ACMDiproyec || {};
 
 window.ACMDiproyec.initNavigation = function initNavigation() {
-  const menuLinks = document.querySelectorAll('.main-nav a');
+  const menuLinks = document.querySelectorAll('.main-nav a[href^="#"]');
   const sections = document.querySelectorAll('main section[id], header[id]');
 
   const sectionObserver = new IntersectionObserver(

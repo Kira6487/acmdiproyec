@@ -12,6 +12,7 @@
   display: flex;
   min-width: 0;
   flex-direction: column;
+  transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
 }
 
 .product-card.featured {
@@ -77,4 +78,27 @@
   border-radius: 6px;
   font-size: 0.76rem;
   font-weight: 800;
+}
+
+.product-media img {
+  transition: transform 250ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .product-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--yellow);
+    box-shadow: 0 16px 34px rgba(25, 28, 30, 0.13);
+  }
+
+  .product-card:hover .product-media img {
+    transform: scale(1.03);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-card,
+  .product-media img {
+    transition: none;
+  }
 }

@@ -48,6 +48,8 @@
 }
 
 .menu-toggle {
+  position: relative;
+  z-index: 2;
   display: none;
   width: 44px;
   height: 44px;
@@ -65,4 +67,17 @@
   height: 2px;
   margin-block: 5px;
   background: var(--ink);
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.menu-toggle.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }

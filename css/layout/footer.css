@@ -64,6 +64,20 @@
   overflow-wrap: anywhere;
 }
 
+.social-links a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-links img {
+  width: 25px;
+  height: 25px;
+  flex: 0 0 25px;
+  object-fit: contain;
+}
+
 .footer-bottom {
   margin-top: 48px;
   padding-block: 22px;
