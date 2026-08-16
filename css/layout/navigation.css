@@ -27,7 +27,8 @@
 }
 
 .main-nav a:hover::after,
-.main-nav a.active::after {
+.main-nav a.active::after,
+.main-nav a:focus-visible::after {
   transform: scaleX(1);
 }
 

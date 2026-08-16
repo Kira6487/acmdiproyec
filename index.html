@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Demo web de ACM Diproyec: diseño, ingeniería, construcción, supervisión y productos para construcción."
+      content="Diseño, construcción y supervisión de proyectos con modelado 3D, recorridos virtuales y soluciones modernas como viguetas prefabricadas y concreto premezclado."
     />
-    <title>ACM Diproyec | Construcción, ingeniería y proyectos</title>
+    <title>ACM Diproyec | Construcción, innovación y proyectos en Perú</title>
     <link rel="icon" type="image/png" href="images/logo-transparente.png" />
     <link rel="shortcut icon" href="images/logo-transparente.png" />
     <link rel="apple-touch-icon" href="images/logo-transparente.png" />
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/modules/menu.js" defer></script>
     <script src="js/modules/navigation.js" defer></script>
+    <script src="js/modules/carousel.js" defer></script>
+    <script src="js/modules/scroll-animations.js" defer></script>
     <script src="js/modules/interactions.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
@@ -70,14 +72,73 @@
 
     <main id="contenido">
       <!-- Presentación principal -->
-      <section class="hero" id="construye">
+      <section class="hero" id="construye" data-carousel>
+        <div class="hero-carousel" aria-hidden="true">
+          <img
+            class="hero-slide is-active"
+            src="images/autocad-ejemplo.jpeg"
+            alt=""
+            width="735"
+            height="1108"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <img
+            class="hero-slide"
+            src="images/casa-ejemplo1.jpeg"
+            alt=""
+            width="736"
+            height="981"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            class="hero-slide"
+            src="images/casa-ejemplo2.jpeg"
+            alt=""
+            width="736"
+            height="920"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            class="hero-slide"
+            src="images/edificio-ejemplo.jpeg"
+            alt=""
+            width="735"
+            height="999"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            class="hero-slide"
+            src="images/planos-ejemplo.jpeg"
+            alt=""
+            width="736"
+            height="736"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            class="hero-slide"
+            src="images/planos-ejemplo2.jpeg"
+            alt=""
+            width="736"
+            height="736"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="hero-scrim" aria-hidden="true"></div>
+
         <div class="container hero-grid">
           <div class="hero-copy">
-            <span class="eyebrow">Tu proyecto, de principio a fin</span>
-            <h1>Construimos tu casa desde los planos hasta la <em>entrega final</em></h1>
+            <span class="eyebrow">Construcción moderna en Perú</span>
+            <h1>Construimos con planificación, <em>tecnología</em> y responsabilidad</h1>
             <p>
-              Diseño, construcción y supervisión integral para que disfrutes tu hogar
-              sin complicaciones.
+              Diseñamos y construimos proyectos con criterios técnicos, modelado 3D,
+              supervisión responsable y soluciones modernas para que puedas visualizar
+              y ejecutar tu proyecto con mayor seguridad.
             </p>
             <div class="hero-actions">
               <a
@@ -86,17 +147,11 @@
                 target="_blank"
                 rel="noreferrer"
               >Cotizar mi proyecto</a>
-              <a class="button button-outline" href="#servicios">Ver servicios</a>
+              <a class="button button-ghost" href="#servicios">Conocer nuestros servicios</a>
             </div>
-            <ul class="hero-tags" aria-label="Especialidades">
-              <li>Diseño</li>
-              <li>Ingeniería</li>
-              <li>Construcción</li>
-              <li>Supervisión</li>
-            </ul>
           </div>
 
-          <div class="hero-video">
+          <div class="hero-video reveal reveal-scale">
             <iframe
               src="https://www.youtube-nocookie.com/embed/WVLXrJGnKnY"
               title="Video principal de ACM Diproyec"
@@ -106,38 +161,113 @@
             ></iframe>
           </div>
         </div>
+
+        <div class="container hero-carousel-controls" role="group" aria-label="Controles del fondo del encabezado">
+          <button class="carousel-arrow" type="button" data-carousel-previous aria-label="Mostrar imagen anterior">
+            <span aria-hidden="true">‹</span>
+          </button>
+          <div class="carousel-indicators" role="group" aria-label="Seleccionar imagen de fondo">
+            <button class="carousel-dot is-active" type="button" data-carousel-dot="0" aria-label="Mostrar imagen 1 de 6" aria-current="true"></button>
+            <button class="carousel-dot" type="button" data-carousel-dot="1" aria-label="Mostrar imagen 2 de 6"></button>
+            <button class="carousel-dot" type="button" data-carousel-dot="2" aria-label="Mostrar imagen 3 de 6"></button>
+            <button class="carousel-dot" type="button" data-carousel-dot="3" aria-label="Mostrar imagen 4 de 6"></button>
+            <button class="carousel-dot" type="button" data-carousel-dot="4" aria-label="Mostrar imagen 5 de 6"></button>
+            <button class="carousel-dot" type="button" data-carousel-dot="5" aria-label="Mostrar imagen 6 de 6"></button>
+          </div>
+          <button class="carousel-toggle" type="button" data-carousel-toggle aria-label="Pausar carrusel" aria-pressed="false">
+            <span data-carousel-toggle-icon aria-hidden="true">Ⅱ</span>
+          </button>
+          <button class="carousel-arrow" type="button" data-carousel-next aria-label="Mostrar imagen siguiente">
+            <span aria-hidden="true">›</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Pilares -->
+      <section class="section pillars-section" aria-labelledby="pillars-title">
+        <div class="container">
+          <div class="section-heading reveal reveal-up">
+            <span class="eyebrow">Método ACM Diproyec</span>
+            <h2 id="pillars-title">Los pilares de una construcción responsable</h2>
+            <p>Decisiones claras, procesos ordenados y acompañamiento profesional en cada etapa.</p>
+          </div>
+
+          <div class="pillar-grid stagger">
+            <article class="pillar-card reveal reveal-up">
+              <span class="pillar-number" aria-hidden="true">01</span>
+              <span class="pillar-line" aria-hidden="true"></span>
+              <h3>Planificación y diseño</h3>
+              <p>Cada proyecto comienza con una propuesta clara, distribución funcional y decisiones tomadas antes de iniciar la obra.</p>
+            </article>
+            <article class="pillar-card reveal reveal-up">
+              <span class="pillar-number" aria-hidden="true">02</span>
+              <span class="pillar-line" aria-hidden="true"></span>
+              <h3>Visualización 3D</h3>
+              <p>Modelamos tu proyecto y preparamos recorridos visuales para que puedas conocer el resultado antes de construir.</p>
+            </article>
+            <article class="pillar-card reveal reveal-up">
+              <span class="pillar-number" aria-hidden="true">03</span>
+              <span class="pillar-line" aria-hidden="true"></span>
+              <h3>Construcción formal</h3>
+              <p>Trabajamos con criterios técnicos, procesos ordenados y cumplimiento de las normas aplicables.</p>
+            </article>
+            <article class="pillar-card reveal reveal-up">
+              <span class="pillar-number" aria-hidden="true">04</span>
+              <span class="pillar-line" aria-hidden="true"></span>
+              <h3>Supervisión responsable</h3>
+              <p>Acompañamos y controlamos cada etapa para reducir errores y proteger la calidad del proyecto.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Construcción responsable -->
+      <section class="section responsible-section" aria-labelledby="responsible-title">
+        <span class="section-geometry" data-parallax aria-hidden="true"></span>
+        <div class="container responsible-grid">
+          <div class="responsible-copy reveal reveal-left">
+            <span class="eyebrow">Orden antes de ejecutar</span>
+            <h2 id="responsible-title">Construir bien desde el inicio cambia el resultado</h2>
+            <p>Una obra sin planificación, supervisión ni criterios técnicos puede generar sobrecostos, retrasos y problemas que aparecen con el tiempo. En ACM Diproyec trabajamos cada proyecto con orden, responsabilidad y una visión completa desde el diseño hasta la ejecución.</p>
+          </div>
+          <ul class="responsible-points reveal reveal-right">
+            <li><span aria-hidden="true">01</span>Planificación antes de construir</li>
+            <li><span aria-hidden="true">02</span>Procesos alineados con las normas aplicables</li>
+            <li><span aria-hidden="true">03</span>Supervisión y comunicación durante la obra</li>
+          </ul>
+        </div>
       </section>
 
       <!-- Servicios -->
       <section class="section" id="servicios">
         <div class="container">
-          <div class="section-heading">
+          <div class="section-heading reveal reveal-up">
             <span class="eyebrow">Soluciones integrales</span>
             <h2>Todo lo que necesitas para construir con confianza</h2>
             <p>Un solo equipo para acompañarte desde la primera idea hasta la entrega de tu obra.</p>
           </div>
 
-          <div class="card-grid four-columns">
-            <article class="info-card service-card">
+          <div class="card-grid four-columns stagger">
+            <article class="info-card service-card reveal reveal-up">
               <span class="icon service-icon" aria-hidden="true">
                 <img src="images/plano.png" alt="" width="512" height="512" />
               </span>
               <h3>Diseño de planos</h3>
               <p>Diseños arquitectónicos y estructurales a medida, funcionales y modernos.</p>
             </article>
-            <article class="info-card service-card">
+            <article class="info-card service-card reveal reveal-up">
               <span class="icon" aria-hidden="true">S/</span>
               <h3>Presupuesto claro</h3>
               <p>Cotizaciones detalladas y transparentes para tomar decisiones con confianza.</p>
             </article>
-            <article class="info-card service-card">
+            <article class="info-card service-card reveal reveal-up">
               <span class="icon service-icon" aria-hidden="true">
                 <img src="images/ladrillos.png" alt="" width="512" height="512" />
               </span>
               <h3>Construcción profesional</h3>
               <p>Ejecución con mano de obra calificada, materiales de calidad y orden en obra.</p>
             </article>
-            <article class="info-card service-card">
+            <article class="info-card service-card reveal reveal-up">
               <span class="icon" aria-hidden="true">✓</span>
               <h3>Supervisión de obra</h3>
               <p>Control técnico permanente para asegurar calidad, tiempo y seguridad.</p>
@@ -146,10 +276,43 @@
         </div>
       </section>
 
+      <!-- Visualización 3D -->
+      <section class="section visualization-section" aria-labelledby="visualization-title">
+        <div class="container visualization-grid">
+          <div class="visualization-copy reveal reveal-left">
+            <span class="eyebrow">Tecnología para decidir mejor</span>
+            <h2 id="visualization-title">Visualiza tu proyecto antes de iniciar la obra</h2>
+            <p>Desarrollamos modelos 3D y videos de recorrido para que puedas comprender los espacios, revisar la propuesta y tomar mejores decisiones antes de comenzar la construcción.</p>
+            <ul class="tech-feature-list">
+              <li>Modelado arquitectónico 3D</li>
+              <li>Recorrido virtual del proyecto</li>
+              <li>Mejor comprensión de espacios y acabados</li>
+              <li>Decisiones anticipadas</li>
+              <li>Una experiencia más clara para el cliente</li>
+            </ul>
+          </div>
+
+          <figure class="model-window reveal reveal-scale">
+            <div class="model-window-bar" aria-hidden="true">
+              <span></span><span></span><span></span>
+              <strong>Vista de modelado</strong>
+            </div>
+            <img
+              src="images/autocad-ejemplo.jpeg"
+              alt="Estación de trabajo con un modelo arquitectónico 3D y planos de construcción"
+              loading="lazy"
+              width="735"
+              height="1108"
+            />
+            <figcaption>Del plano a una experiencia visual más clara.</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <!-- Productos -->
       <section class="section" id="productos">
         <div class="container">
-          <div class="section-heading row-heading">
+          <div class="section-heading row-heading reveal reveal-up">
             <div>
               <span class="eyebrow">Catálogo</span>
               <h2>Productos estrella</h2>
@@ -157,8 +320,8 @@
             <p>Soluciones para obras seguras, resistentes y eficientes.</p>
           </div>
 
-          <div class="card-grid four-columns product-grid">
-            <article class="product-card featured">
+          <div class="card-grid four-columns product-grid stagger">
+            <article class="product-card featured reveal reveal-up">
               <span class="badge">Más vendido</span>
               <div class="product-media">
                 <img
@@ -184,7 +347,7 @@
                 <a class="button button-outline button-small" href="#contacto">Consultar</a>
               </div>
             </article>
-            <article class="product-card">
+            <article class="product-card reveal reveal-up">
               <div class="product-media">
                 <img
                   src="images/escantillon-20cm.png"
@@ -206,7 +369,7 @@
                 <a class="button button-outline button-small" href="#contacto">Consultar</a>
               </div>
             </article>
-            <article class="product-card">
+            <article class="product-card reveal reveal-up">
               <div class="product-media">
                 <img
                   src="images/concreto.png"
@@ -222,7 +385,7 @@
                 <a class="button button-outline button-small" href="#contacto">Consultar</a>
               </div>
             </article>
-            <article class="product-card">
+            <article class="product-card reveal reveal-up">
               <div class="product-media">
                 <img
                   src="images/viguetas.png"
@@ -242,10 +405,45 @@
         </div>
       </section>
 
+      <!-- Innovación -->
+      <section class="section innovation-section" aria-labelledby="innovation-title">
+        <span class="section-geometry section-geometry-right" data-parallax aria-hidden="true"></span>
+        <div class="container">
+          <div class="section-heading reveal reveal-up">
+            <span class="eyebrow">Innovación aplicada</span>
+            <h2 id="innovation-title">Soluciones modernas para construir mejor</h2>
+            <p>Procesos y materiales que ayudan a organizar la ejecución y trabajar con mayor control.</p>
+          </div>
+
+          <div class="modern-solutions stagger">
+            <article class="modern-solution-card reveal reveal-left">
+              <div class="modern-solution-media">
+                <img src="images/viguetas.png" alt="Viguetas prefabricadas de concreto" loading="lazy" width="1536" height="1024" />
+              </div>
+              <div>
+                <span class="solution-index" aria-hidden="true">01 / SISTEMA</span>
+                <h3>Techado con viguetas prefabricadas</h3>
+                <p>Promovemos sistemas de techado con viguetas prefabricadas como una alternativa moderna que permite organizar y agilizar el proceso constructivo.</p>
+              </div>
+            </article>
+            <article class="modern-solution-card reveal reveal-right">
+              <div class="modern-solution-media">
+                <img src="images/concreto.png" alt="Concreto premezclado listo para una ejecución controlada" loading="lazy" width="1536" height="1024" />
+              </div>
+              <div>
+                <span class="solution-index" aria-hidden="true">02 / MATERIAL</span>
+                <h3>Concreto premezclado</h3>
+                <p>El concreto premezclado permite trabajar con una dosificación controlada y una ejecución más ordenada en obra.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <!-- Proyectos -->
       <section class="section section-muted" id="proyectos">
         <div class="container">
-          <div class="section-heading row-heading">
+          <div class="section-heading row-heading reveal reveal-up">
             <div>
               <span class="eyebrow">Portafolio</span>
               <h2>Proyectos destacados</h2>
@@ -253,39 +451,33 @@
             <p>Una selección de proyectos de ACM Diproyec.</p>
           </div>
 
-          <div class="card-grid three-columns">
-            <article class="project-card">
-              <img
-                class="project-media"
-                src="images/Casa-Moderna.jpeg"
-                alt="Proyecto Ureña de ACM Diproyec"
-                loading="lazy"
-                width="1310"
-                height="1200"
-              />
-              <div class="project-content"><h3>Proyecto Ureña</h3></div>
+          <div class="card-grid three-columns stagger">
+            <article class="project-card reveal reveal-up">
+              <div class="project-media-wrap">
+                <img class="project-media" src="images/Casa-Moderna.jpeg" alt="Fachada contemporánea del Proyecto Ureña" loading="lazy" width="1310" height="1200" />
+              </div>
+              <div class="project-content">
+                <h3>Proyecto Ureña</h3>
+                <p>Propuesta residencial contemporánea con líneas limpias, acabados contrastantes y una fachada vertical de carácter moderno.</p>
+              </div>
             </article>
-            <article class="project-card">
-              <img
-                class="project-media"
-                src="images/Departamentos-Triple.jpeg"
-                alt="Proyecto Isasi de ACM Diproyec"
-                loading="lazy"
-                width="1254"
-                height="1254"
-              />
-              <div class="project-content"><h3>Proyecto Isasi</h3></div>
+            <article class="project-card reveal reveal-up">
+              <div class="project-media-wrap">
+                <img class="project-media" src="images/Departamentos-Triple.jpeg" alt="Edificio residencial moderno del Proyecto Isasi" loading="lazy" width="1254" height="1254" />
+              </div>
+              <div class="project-content">
+                <h3>Proyecto Isasi</h3>
+                <p>Diseño residencial de varios niveles con balcones, iluminación cálida y una composición moderna de materiales y volúmenes.</p>
+              </div>
             </article>
-            <article class="project-card">
-              <img
-                class="project-media"
-                src="images/Proyecto-Mijael.jpeg"
-                alt="Proyecto Mijael de ACM Diproyec"
-                loading="lazy"
-                width="1500"
-                height="1225"
-              />
-              <div class="project-content"><h3>Proyecto Mijael</h3></div>
+            <article class="project-card reveal reveal-up">
+              <div class="project-media-wrap">
+                <img class="project-media" src="images/Proyecto-Mijael.jpeg" alt="Fachada multifamiliar contemporánea del Proyecto Mijael" loading="lazy" width="1500" height="1225" />
+              </div>
+              <div class="project-content">
+                <h3>Proyecto Mijael</h3>
+                <p>Propuesta residencial multifamiliar con amplios ventanales, volúmenes definidos y una fachada funcional de estilo contemporáneo.</p>
+              </div>
             </article>
           </div>
         </div>
@@ -294,7 +486,7 @@
       <!-- Quiénes somos -->
       <section class="section about-section" id="quienes-somos">
         <div class="container about-grid">
-          <div class="about-copy">
+          <div class="about-copy reveal reveal-left">
             <span class="eyebrow">ACM Diproyec</span>
             <h2>¿Quiénes somos?</h2>
             <h3>Alejandro Contreras</h3>
@@ -307,7 +499,7 @@
               durante todo el proceso constructivo.
             </p>
           </div>
-          <div class="about-gallery" aria-label="Alejandro Contreras en proyectos de ACM Diproyec">
+          <div class="about-gallery reveal reveal-right" aria-label="Alejandro Contreras en proyectos de ACM Diproyec">
             <img
               class="about-photo about-portrait"
               src="images/ingeniero.jpeg"
@@ -330,7 +522,7 @@
 
       <!-- Contacto -->
       <section class="contact-banner" id="contacto">
-        <div class="container contact-banner-inner">
+        <div class="container contact-banner-inner reveal reveal-up">
           <div>
             <span class="eyebrow">Hablemos de tu proyecto</span>
             <h2>¿Listo para construir tu nuevo hogar?</h2>
@@ -402,7 +594,9 @@
       href="https://wa.me/51986635347?text=Hola%20ACM%20Diproyec,%20quisiera%20más%20información."
       target="_blank"
       rel="noreferrer"
-      aria-label="Contactar a ACM Diproyec por WhatsApp"
-    >WA</a>
+      aria-label="Cotizar proyecto por WhatsApp"
+    >
+      <img src="images/whatsapp-logo.png" alt="" aria-hidden="true" width="5000" height="5000" />
+    </a>
   </body>
 </html>

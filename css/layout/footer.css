@@ -105,6 +105,31 @@
   background: var(--green);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
   color: white;
-  font-size: 0.8rem;
-  font-weight: 900;
+  animation: whatsapp-attention 6s ease-in-out 2s infinite;
+}
+
+.floating-whatsapp img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+@keyframes whatsapp-attention {
+  0%,
+  12%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  }
+
+  5% {
+    transform: scale(1.07);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22), 0 0 0 9px rgba(32, 185, 88, 0.14);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-whatsapp {
+    animation: none;
+  }
 }

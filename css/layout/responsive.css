@@ -10,6 +10,10 @@
   .four-columns {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .pillar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 900px) {
@@ -37,11 +41,13 @@
     height: calc(100dvh - 70px);
     overflow-y: auto;
     clip-path: inset(0 0 0 100%);
-    background: white;
+    background:
+      linear-gradient(rgba(255, 253, 250, 0.97), rgba(255, 253, 250, 0.97)),
+      url("../../images/texturaconcreto.jpeg") center / cover;
     box-shadow: -16px 20px 34px rgba(23, 25, 27, 0.16);
     opacity: 0;
     pointer-events: none;
-    transition: clip-path 200ms ease, opacity 200ms ease, visibility 200ms;
+    transition: clip-path 260ms ease, opacity 220ms ease, visibility 220ms;
   }
 
   .main-nav.open {
@@ -60,6 +66,18 @@
   .main-nav a::after {
     display: none;
   }
+
+  .main-nav.open > a {
+    animation: mobile-nav-link 260ms ease both;
+  }
+
+  .main-nav.open > a:nth-child(2) { animation-delay: 25ms; }
+  .main-nav.open > a:nth-child(3) { animation-delay: 50ms; }
+  .main-nav.open > a:nth-child(4) { animation-delay: 75ms; }
+  .main-nav.open > a:nth-child(5) { animation-delay: 100ms; }
+  .main-nav.open > a:nth-child(6) { animation-delay: 125ms; }
+  .main-nav.open > a:nth-child(7) { animation-delay: 150ms; }
+  .main-nav.open > a:nth-child(8) { animation-delay: 175ms; }
 
   .main-nav .mobile-nav-cta {
     display: inline-flex;
@@ -92,7 +110,40 @@
   .hero-grid {
     min-height: auto;
     grid-template-columns: 1fr;
-    padding-block: 64px;
+    gap: 46px;
+    padding-block: 72px 116px;
+  }
+
+  .hero-video {
+    width: min(100%, 720px);
+  }
+
+  .hero-scrim {
+    background:
+      linear-gradient(90deg, rgba(12, 14, 15, 0.9), rgba(12, 14, 15, 0.67)),
+      linear-gradient(0deg, rgba(12, 14, 15, 0.72), transparent 55%);
+  }
+
+  .hero-carousel-controls {
+    bottom: 24px;
+  }
+
+  .responsible-grid,
+  .visualization-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .visualization-copy {
+    max-width: 720px;
+  }
+
+  .model-window {
+    width: min(100%, 720px);
+  }
+
+  .modern-solutions {
+    grid-template-columns: 1fr;
   }
 
   .three-columns,
@@ -148,28 +199,43 @@
   }
 
   .hero-grid {
-    gap: 35px;
+    gap: 36px;
+    padding-block: 58px 108px;
   }
 
   .hero-copy h1 {
-    font-size: clamp(2.45rem, 12.5vw, 3.5rem);
+    font-size: clamp(2.35rem, 11.5vw, 3.45rem);
   }
 
-  .hero-tags {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  .hero-copy > p {
+    font-size: 1rem;
   }
 
-  .hero-tags li + li {
-    border-left: 0;
+  .hero-scrim {
+    background: rgba(12, 14, 15, 0.76);
   }
 
-  .hero-tags li:nth-child(even) {
-    border-left: 1px solid var(--line);
+  .hero-slide {
+    object-position: center;
   }
 
-  .hero-tags li:nth-child(n + 3) {
-    border-top: 1px solid var(--line);
+  .hero-carousel-controls {
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .carousel-indicators {
+    gap: 5px;
+    padding-inline: 8px;
+  }
+
+  .carousel-dot {
+    width: 7px;
+    height: 7px;
+  }
+
+  .carousel-dot.is-active {
+    width: 18px;
   }
 
   .section {
@@ -187,9 +253,49 @@
 
   .four-columns,
   .three-columns,
+  .pillar-grid,
   .about-grid,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pillar-card {
+    min-height: 0;
+  }
+
+  .responsible-grid,
+  .visualization-grid {
+    gap: 34px;
+  }
+
+  .responsible-copy h2,
+  .visualization-copy h2 {
+    font-size: clamp(2rem, 10vw, 2.7rem);
+  }
+
+  .responsible-points li {
+    grid-template-columns: 44px 1fr;
+  }
+
+  .tech-feature-list {
+    grid-template-columns: 1fr;
+  }
+
+  .model-window img {
+    height: 330px;
+  }
+
+  .modern-solution-card {
+    grid-template-columns: 1fr;
+  }
+
+  .modern-solution-media img {
+    min-height: 210px;
+    max-height: 240px;
+  }
+
+  .project-content {
+    min-height: 0;
   }
 
   .footer-grid {
@@ -234,7 +340,15 @@
 
   .floating-whatsapp {
     right: 14px;
-    bottom: 14px;
+    bottom: max(14px, env(safe-area-inset-bottom));
+  }
+
+  .contact-banner {
+    padding-bottom: 78px;
+  }
+
+  .section-geometry {
+    display: none;
   }
 }
 
@@ -270,7 +384,21 @@
   *,
   *::before,
   *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes mobile-nav-link {
+  from {
+    transform: translateX(14px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

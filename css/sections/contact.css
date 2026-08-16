@@ -1,8 +1,27 @@
 .contact-banner {
+  position: relative;
+  overflow: hidden;
   padding-block: 58px;
   background:
     linear-gradient(110deg, rgba(245, 180, 0, 0.94), rgba(255, 201, 56, 0.9)),
     url("../../images/texturaconcreto.jpeg") center 42% / 520px auto repeat;
+}
+
+.contact-banner::after {
+  position: absolute;
+  right: -54px;
+  bottom: -110px;
+  width: 240px;
+  aspect-ratio: 1;
+  border: 28px solid rgba(23, 25, 27, 0.1);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.contact-banner-inner {
+  position: relative;
+  z-index: 1;
 }
 
 .contact-banner-inner {

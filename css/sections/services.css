@@ -1,5 +1,11 @@
+#servicios {
+  background:
+    linear-gradient(rgba(255, 253, 250, 0.965), rgba(255, 253, 250, 0.965)),
+    url("../../images/texturaconcreto.jpeg") center / 520px auto repeat;
+}
+
 .service-card {
-  transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+  transition: opacity 650ms ease, transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
 }
 
 .service-card .icon {
@@ -10,6 +16,12 @@
   width: 42px;
   height: 42px;
   object-fit: contain;
+}
+
+.service-card:nth-child(2) .icon,
+.service-card:nth-child(4) .icon {
+  border-color: var(--graphite);
+  background: var(--sand);
 }
 
 @media (hover: hover) and (pointer: fine) {

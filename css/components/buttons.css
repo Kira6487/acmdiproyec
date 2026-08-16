@@ -30,6 +30,18 @@
   background: white;
 }
 
+.button-ghost {
+  border-color: rgba(255, 255, 255, 0.68);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  backdrop-filter: blur(8px);
+}
+
+.button-ghost:hover {
+  border-color: var(--yellow);
+  background: rgba(255, 255, 255, 0.15);
+}
+
 .button-dark {
   background: var(--ink);
   color: white;

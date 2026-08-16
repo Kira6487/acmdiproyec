@@ -1,0 +1,355 @@
+.pillars-section {
+  background:
+    linear-gradient(rgba(247, 243, 235, 0.96), rgba(247, 243, 235, 0.96)),
+    url("../../images/texturaconcreto.jpeg") center / 420px auto repeat;
+}
+
+.pillars-section::before {
+  position: absolute;
+  top: 0;
+  right: 7%;
+  width: 34%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--yellow));
+  content: "";
+}
+
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.pillar-card {
+  position: relative;
+  min-width: 0;
+  min-height: 285px;
+  overflow: hidden;
+  padding: 28px 24px;
+  border: 1px solid rgba(23, 25, 27, 0.12);
+  border-radius: var(--radius);
+  background: rgba(255, 253, 250, 0.92);
+  box-shadow: 0 15px 36px rgba(31, 29, 25, 0.07);
+  transition: opacity 650ms ease, transform 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
+}
+
+.pillar-card::after {
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
+  width: 110px;
+  aspect-ratio: 1;
+  transform: rotate(35deg);
+  border: 1px solid rgba(245, 180, 0, 0.16);
+  content: "";
+}
+
+.pillar-number {
+  color: var(--yellow-dark);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.pillar-line {
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin-block: 20px 28px;
+  background: var(--yellow);
+  box-shadow: 56px 0 0 rgba(23, 25, 27, 0.1);
+}
+
+.pillar-card h3 {
+  margin: 0 0 11px;
+  font-size: 1.12rem;
+  line-height: 1.2;
+}
+
+.pillar-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.responsible-section {
+  overflow: hidden;
+  background:
+    linear-gradient(105deg, rgba(24, 27, 29, 0.97), rgba(24, 27, 29, 0.88)),
+    url("../../images/concreto-aspero-textura.jpeg") center / cover;
+  color: white;
+}
+
+.responsible-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 82px;
+}
+
+.responsible-copy h2,
+.visualization-copy h2 {
+  margin: 0.35rem 0 1.2rem;
+  font-size: clamp(2.15rem, 4vw, 3.55rem);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.responsible-copy p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.02rem;
+}
+
+.responsible-section .eyebrow,
+.innovation-section .eyebrow {
+  color: var(--yellow);
+}
+
+.responsible-points {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  gap: 12px;
+  list-style: none;
+}
+
+.responsible-points li {
+  display: grid;
+  min-height: 76px;
+  align-items: center;
+  grid-template-columns: 54px 1fr;
+  padding: 14px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.065);
+  backdrop-filter: blur(6px);
+  font-weight: 750;
+}
+
+.responsible-points span {
+  color: var(--yellow);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.visualization-section {
+  overflow: hidden;
+  background: var(--warm);
+}
+
+.visualization-section::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 46%;
+  height: 100%;
+  background:
+    linear-gradient(90deg, var(--warm), rgba(247, 243, 235, 0.56)),
+    url("../../images/cubos-concreto-textura.jpeg") center / cover;
+  content: "";
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.visualization-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 74px;
+}
+
+.visualization-copy > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.tech-feature-list {
+  display: grid;
+  margin: 28px 0 0;
+  padding: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+  list-style: none;
+}
+
+.tech-feature-list li {
+  position: relative;
+  min-height: 48px;
+  padding: 12px 12px 12px 34px;
+  border: 1px solid rgba(23, 25, 27, 0.09);
+  border-radius: 10px;
+  background: rgba(255, 253, 250, 0.78);
+  font-size: 0.86rem;
+  font-weight: 720;
+}
+
+.tech-feature-list li::before {
+  position: absolute;
+  top: 19px;
+  left: 14px;
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--yellow-dark);
+  content: "";
+}
+
+.model-window {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius);
+  background: #1c2023;
+  box-shadow: var(--shadow-strong);
+}
+
+.model-window-bar {
+  display: flex;
+  height: 48px;
+  align-items: center;
+  padding-inline: 16px;
+  gap: 7px;
+  background: #262b2e;
+  color: #d8dadb;
+}
+
+.model-window-bar span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #575d61;
+}
+
+.model-window-bar span:first-child {
+  background: var(--yellow);
+}
+
+.model-window-bar strong {
+  margin-left: auto;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.model-window img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  object-position: center 62%;
+}
+
+.model-window figcaption {
+  position: relative;
+  padding: 16px 20px;
+  color: #d8dadb;
+  font-size: 0.82rem;
+}
+
+.model-window figcaption::before {
+  display: inline-block;
+  width: 34px;
+  height: 2px;
+  margin-right: 10px;
+  background: var(--yellow);
+  vertical-align: middle;
+  content: "";
+}
+
+.innovation-section {
+  overflow: hidden;
+  background:
+    linear-gradient(105deg, rgba(28, 31, 33, 0.97), rgba(28, 31, 33, 0.9)),
+    url("../../images/pared-rocosa-textura.jpeg") center / cover;
+  color: white;
+}
+
+.innovation-section .section-heading p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.modern-solutions {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.modern-solution-card {
+  display: grid;
+  min-width: 0;
+  overflow: hidden;
+  grid-template-columns: 0.75fr 1.25fr;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.075);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(8px);
+}
+
+.modern-solution-card > div:last-child {
+  padding: 28px 25px;
+}
+
+.modern-solution-media {
+  overflow: hidden;
+  background: #d8d6d0;
+}
+
+.modern-solution-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 270px;
+  object-fit: cover;
+  transition: transform 280ms ease;
+}
+
+.solution-index {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--yellow);
+  font-size: 0.67rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.modern-solution-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+  line-height: 1.15;
+}
+
+.modern-solution-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.91rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pillar-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(245, 180, 0, 0.72);
+    box-shadow: 0 22px 44px rgba(31, 29, 25, 0.12);
+  }
+
+  .modern-solution-card:hover .modern-solution-media img {
+    transform: scale(1.035);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pillar-card,
+  .modern-solution-media img {
+    transition: none;
+  }
+
+  .section-geometry {
+    transform: rotate(18deg);
+  }
+}

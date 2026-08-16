@@ -12,12 +12,25 @@
 }
 
 .info-card {
+  position: relative;
+  overflow: hidden;
   padding: 30px 24px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: white;
   box-shadow: 0 12px 30px rgba(25, 28, 30, 0.055);
   text-align: center;
+}
+
+.info-card::after {
+  position: absolute;
+  right: -26px;
+  bottom: -42px;
+  width: 94px;
+  height: 94px;
+  border: 1px solid rgba(245, 180, 0, 0.18);
+  transform: rotate(24deg);
+  content: "";
 }
 
 .info-card .icon {

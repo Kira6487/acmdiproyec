@@ -2,13 +2,17 @@
   --yellow: #f5b400;
   --yellow-dark: #d89d00;
   --ink: #17191b;
+  --graphite: #2d3134;
   --muted: #666b70;
   --line: #e4e5e7;
-  --surface: #ffffff;
-  --soft: #f5f5f3;
+  --surface: #fffdfa;
+  --warm: #f7f3eb;
+  --sand: #ece4d6;
+  --soft: #f1f1ed;
   --dark: #232628;
   --green: #20b958;
   --radius: 18px;
-  --shadow: 0 14px 34px rgba(25, 28, 30, 0.09);
+  --shadow: 0 18px 44px rgba(25, 28, 30, 0.11);
+  --shadow-strong: 0 24px 60px rgba(16, 18, 20, 0.18);
   --container: 1180px;
 }

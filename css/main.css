@@ -4,13 +4,15 @@
 @import url("layout/header.css");
 @import url("layout/navigation.css");
 @import url("components/buttons.css");
-@import url("sections/hero.css");
 @import url("components/images.css");
 @import url("components/cards.css");
+@import url("components/animations.css");
+@import url("sections/hero.css");
 @import url("sections/services.css");
 @import url("sections/products.css");
 @import url("sections/projects.css");
 @import url("sections/about.css");
+@import url("sections/innovation.css");
 @import url("sections/contact.css");
 @import url("layout/footer.css");
 @import url("layout/responsive.css");

@@ -12,7 +12,21 @@
   display: flex;
   min-width: 0;
   flex-direction: column;
-  transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+  transition: opacity 650ms ease, transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+}
+
+#productos {
+  background: var(--surface);
+}
+
+#productos::before {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 28%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--yellow), transparent);
+  content: "";
 }
 
 .product-card.featured {
