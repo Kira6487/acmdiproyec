@@ -36,3 +36,11 @@
 .menu-backdrop {
   display: none;
 }
+
+.mobile-menu__header {
+  display: none;
+}
+
+.mobile-menu__links {
+  display: contents;
+}

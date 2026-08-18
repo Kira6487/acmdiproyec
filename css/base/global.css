@@ -21,6 +21,11 @@ main {
 }
 
 body.menu-open {
+  position: fixed;
+  top: var(--menu-scroll-offset, 0);
+  right: 0;
+  left: 0;
+  width: 100%;
   overflow: hidden;
 }
 

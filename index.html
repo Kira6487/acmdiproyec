@@ -45,19 +45,29 @@
         </button>
 
         <nav class="main-nav" id="main-navigation" aria-label="Navegación principal">
-          <a href="#inicio">Inicio</a>
-          <a href="#construye">Construye tu casa</a>
-          <a href="#servicios">Servicios</a>
-          <a href="#productos">Productos</a>
-          <a href="#proyectos">Proyectos</a>
-          <a href="#quienes-somos">Nosotros</a>
-          <a href="#contacto">Contacto</a>
-          <a
-            class="button button-primary mobile-nav-cta"
-            href="https://wa.me/51986635347?text=Hola%20ACM%20Diproyec,%20quisiera%20cotizar%20un%20proyecto."
-            target="_blank"
-            rel="noopener noreferrer"
-          >Cotiza por WhatsApp</a>
+          <div class="mobile-menu__header">
+            <a class="mobile-menu__brand" href="#inicio" aria-label="ACM Diproyec, ir al inicio">
+              <img src="images/logo-simple.jpeg" alt="" width="804" height="746" />
+              <strong>ACM DIPROYEC</strong>
+            </a>
+            <button class="mobile-menu__close" type="button" aria-label="Cerrar menú">
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="mobile-menu__links">
+            <a href="#construye">Construye tu casa</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#productos">Productos</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#quienes-somos">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+            <a
+              class="button button-primary mobile-nav-cta"
+              href="https://wa.me/51986635347?text=Hola%20ACM%20Diproyec,%20quisiera%20cotizar%20un%20proyecto."
+              target="_blank"
+              rel="noopener noreferrer"
+            >Cotiza por WhatsApp</a>
+          </div>
         </nav>
 
         <a
@@ -72,10 +82,11 @@
 
     <main id="contenido">
       <!-- Presentación principal -->
-      <section class="hero" id="construye" data-carousel>
+      <section class="hero" id="construye" data-carousel data-carousel-autoplay="5500" aria-label="Presentación principal">
         <div class="hero-carousel" aria-hidden="true">
           <img
             class="hero-slide is-active"
+            data-carousel-slide
             src="images/autocad-ejemplo.jpeg"
             alt=""
             width="735"
@@ -85,6 +96,7 @@
           />
           <img
             class="hero-slide"
+            data-carousel-slide
             src="images/casa-ejemplo1.jpeg"
             alt=""
             width="736"
@@ -94,6 +106,7 @@
           />
           <img
             class="hero-slide"
+            data-carousel-slide
             src="images/casa-ejemplo2.jpeg"
             alt=""
             width="736"
@@ -103,6 +116,7 @@
           />
           <img
             class="hero-slide"
+            data-carousel-slide
             src="images/edificio-ejemplo.jpeg"
             alt=""
             width="735"
@@ -112,6 +126,7 @@
           />
           <img
             class="hero-slide"
+            data-carousel-slide
             src="images/planos-ejemplo.jpeg"
             alt=""
             width="736"
@@ -121,6 +136,7 @@
           />
           <img
             class="hero-slide"
+            data-carousel-slide
             src="images/planos-ejemplo2.jpeg"
             alt=""
             width="736"
@@ -297,13 +313,23 @@
               <span></span><span></span><span></span>
               <strong>Vista de modelado</strong>
             </div>
-            <img
-              src="images/autocad-ejemplo.jpeg"
-              alt="Estación de trabajo con un modelo arquitectónico 3D y planos de construcción"
-              loading="lazy"
-              width="735"
-              height="1108"
-            />
+            <div class="content-carousel model-carousel" data-carousel aria-roledescription="carrusel" aria-label="Recorrido virtual del proyecto">
+              <div class="content-carousel__viewport" data-carousel-viewport tabindex="0">
+                <div class="content-carousel__track">
+                  <img class="content-carousel__slide is-active" data-carousel-slide aria-hidden="false" src="images/Recorrido1.jpeg" alt="Vista interior del recorrido virtual, sala y comedor" loading="lazy" width="1402" height="1122" />
+                  <img class="content-carousel__slide" data-carousel-slide aria-hidden="true" src="images/Recorrido2.jpeg" alt="Vista interior del recorrido virtual del proyecto" loading="lazy" width="1237" height="1271" />
+                  <img class="content-carousel__slide" data-carousel-slide aria-hidden="true" src="images/Recorrido3.jpeg" alt="Vista arquitectónica del recorrido virtual" loading="lazy" width="1300" height="1209" />
+                  <img class="content-carousel__slide" data-carousel-slide aria-hidden="true" src="images/Recorrido4.jpeg" alt="Ambiente interior modelado del recorrido virtual" loading="lazy" width="1341" height="1173" />
+                  <img class="content-carousel__slide" data-carousel-slide aria-hidden="true" src="images/Recorrido5.jpeg" alt="Vista modelada de sala y comedor del proyecto" loading="lazy" width="1600" height="899" />
+                </div>
+                <button class="content-carousel__arrow content-carousel__arrow--previous" type="button" data-carousel-previous aria-label="Mostrar imagen anterior"><span aria-hidden="true">‹</span></button>
+                <button class="content-carousel__arrow content-carousel__arrow--next" type="button" data-carousel-next aria-label="Mostrar imagen siguiente"><span aria-hidden="true">›</span></button>
+              </div>
+              <div class="content-carousel__navigation">
+                <div class="content-carousel__indicators" data-carousel-indicators aria-label="Seleccionar imagen del recorrido"></div>
+                <span class="content-carousel__status" data-carousel-status aria-live="polite">Imagen 1 de 5</span>
+              </div>
+            </div>
             <figcaption>Del plano a una experiencia visual más clara.</figcaption>
           </figure>
         </div>
@@ -323,48 +349,61 @@
           <div class="card-grid four-columns product-grid stagger">
             <article class="product-card featured reveal reveal-up">
               <span class="badge">Más vendido</span>
-              <div class="product-media">
-                <img
-                  src="images/dado-4cm.png"
-                  alt="Dados separadores de concreto disponibles en diferentes medidas"
-                  loading="lazy"
-                  width="1254"
-                  height="1254"
-                />
+              <div class="product-media content-carousel product-carousel" data-carousel aria-roledescription="carrusel" aria-label="Dados separadores de concreto">
+                <div class="content-carousel__viewport" data-carousel-viewport tabindex="0">
+                  <div class="content-carousel__track">
+                    <img class="content-carousel__slide is-active" data-carousel-slide aria-hidden="false" src="images/Dados-Todos.png" alt="Dados separadores de concreto en todas las medidas" loading="lazy" width="1672" height="941" />
+                    <img class="content-carousel__slide" data-carousel-slide data-carousel-measure="2" aria-hidden="true" src="images/dado-2cm.png" alt="Dado separador de concreto de 2 centímetros" loading="lazy" width="1254" height="1254" />
+                    <img class="content-carousel__slide" data-carousel-slide data-carousel-measure="2.5" aria-hidden="true" src="images/dado-2.5cm.png" alt="Dado separador de concreto de 2.5 centímetros" loading="lazy" width="1254" height="1254" />
+                    <img class="content-carousel__slide" data-carousel-slide data-carousel-measure="3" aria-hidden="true" src="images/dado-3cm.png" alt="Dado separador de concreto de 3 centímetros" loading="lazy" width="1254" height="1254" />
+                    <img class="content-carousel__slide" data-carousel-slide data-carousel-measure="4" aria-hidden="true" src="images/dado-4cm.png" alt="Dado separador de concreto de 4 centímetros" loading="lazy" width="1254" height="1254" />
+                    <img class="content-carousel__slide" data-carousel-slide data-carousel-measure="5" aria-hidden="true" src="images/dado-5cm.png" alt="Dado separador de concreto de 5 centímetros" loading="lazy" width="1254" height="1254" />
+                    <img class="content-carousel__slide" data-carousel-slide data-carousel-measure="7" aria-hidden="true" src="images/dado-7cm.png" alt="Dado separador de concreto de 7 centímetros" loading="lazy" width="1254" height="1254" />
+                    <img class="content-carousel__slide" data-carousel-slide data-carousel-measure="7.5" aria-hidden="true" src="images/dado-7.5cm.png" alt="Dado separador de concreto de 7.5 centímetros" loading="lazy" width="1254" height="1254" />
+                    <img class="content-carousel__slide" data-carousel-slide aria-hidden="true" src="images/Dados-Todos2.png" alt="Vista alternativa de dados separadores en todas las medidas" loading="lazy" width="1254" height="1254" />
+                  </div>
+                  <button class="content-carousel__arrow content-carousel__arrow--previous" type="button" data-carousel-previous aria-label="Imagen anterior"><span aria-hidden="true">‹</span></button>
+                  <button class="content-carousel__arrow content-carousel__arrow--next" type="button" data-carousel-next aria-label="Imagen siguiente"><span aria-hidden="true">›</span></button>
+                  <span class="content-carousel__status" data-carousel-status aria-live="polite">Imagen 1 de 9</span>
+                </div>
               </div>
               <div class="product-content">
                 <h3>Dados separadores de concreto</h3>
                 <p>Aseguran el recubrimiento y la durabilidad del acero de refuerzo.</p>
                 <ul class="sizes">
-                  <li>2 cm</li>
-                  <li>2.5 cm</li>
-                  <li>3 cm</li>
-                  <li>4 cm</li>
-                  <li>5 cm</li>
-                  <li>7 cm</li>
-                  <li>7.5 cm</li>
+                  <li><button type="button" data-carousel-measure="2" aria-pressed="false">2 cm</button></li>
+                  <li><button type="button" data-carousel-measure="2.5" aria-pressed="false">2.5 cm</button></li>
+                  <li><button type="button" data-carousel-measure="3" aria-pressed="false">3 cm</button></li>
+                  <li><button type="button" data-carousel-measure="4" aria-pressed="false">4 cm</button></li>
+                  <li><button type="button" data-carousel-measure="5" aria-pressed="false">5 cm</button></li>
+                  <li><button type="button" data-carousel-measure="7" aria-pressed="false">7 cm</button></li>
+                  <li><button type="button" data-carousel-measure="7.5" aria-pressed="false">7.5 cm</button></li>
                 </ul>
                 <a class="button button-outline button-small" href="#contacto">Consultar</a>
               </div>
             </article>
             <article class="product-card reveal reveal-up">
-              <div class="product-media">
-                <img
-                  src="images/escantillon-20cm.png"
-                  alt="Escantillones de concreto para mallas y acero de refuerzo"
-                  loading="lazy"
-                  width="1536"
-                  height="1024"
-                />
+              <div class="product-media content-carousel product-carousel" data-carousel aria-roledescription="carrusel" aria-label="Escantillones de concreto">
+                <div class="content-carousel__viewport" data-carousel-viewport tabindex="0">
+                  <div class="content-carousel__track">
+                    <img class="content-carousel__slide is-active" data-carousel-slide data-carousel-measure="15" aria-hidden="false" src="images/escantillon-15cm.png" alt="Escantillón de concreto de 15 centímetros" loading="lazy" width="1254" height="1254" />
+                    <img class="content-carousel__slide" data-carousel-slide data-carousel-measure="20" aria-hidden="true" src="images/escantillon-20cm.png" alt="Escantillón de concreto de 20 centímetros" loading="lazy" width="1254" height="1254" />
+                    <img class="content-carousel__slide" data-carousel-slide data-carousel-measure="25" aria-hidden="true" src="images/escantillon-25cm.png" alt="Escantillón de concreto de 25 centímetros" loading="lazy" width="1254" height="1254" />
+                    <img class="content-carousel__slide" data-carousel-slide data-carousel-measure="30" aria-hidden="true" src="images/escantillon-30cm.png" alt="Escantillón de concreto de 30 centímetros" loading="lazy" width="1254" height="1254" />
+                  </div>
+                  <button class="content-carousel__arrow content-carousel__arrow--previous" type="button" data-carousel-previous aria-label="Imagen anterior"><span aria-hidden="true">‹</span></button>
+                  <button class="content-carousel__arrow content-carousel__arrow--next" type="button" data-carousel-next aria-label="Imagen siguiente"><span aria-hidden="true">›</span></button>
+                  <span class="content-carousel__status" data-carousel-status aria-live="polite">Imagen 1 de 4</span>
+                </div>
               </div>
               <div class="product-content">
                 <h3>Escantillones de concreto</h3>
                 <p>Soporte resistente para mallas y acero de refuerzo.</p>
                 <ul class="sizes">
-                  <li>15 cm</li>
-                  <li>20 cm</li>
-                  <li>25 cm</li>
-                  <li>30 cm</li>
+                  <li><button class="is-active" type="button" data-carousel-measure="15" aria-pressed="true">15 cm</button></li>
+                  <li><button type="button" data-carousel-measure="20" aria-pressed="false">20 cm</button></li>
+                  <li><button type="button" data-carousel-measure="25" aria-pressed="false">25 cm</button></li>
+                  <li><button type="button" data-carousel-measure="30" aria-pressed="false">30 cm</button></li>
                 </ul>
                 <a class="button button-outline button-small" href="#contacto">Consultar</a>
               </div>

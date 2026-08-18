@@ -237,11 +237,21 @@
   text-transform: uppercase;
 }
 
+.model-carousel .content-carousel__viewport {
+  height: 440px;
+  background: #171a1c;
+}
+
 .model-window img {
   width: 100%;
   height: 440px;
-  object-fit: cover;
-  object-position: center 62%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.model-carousel .content-carousel__navigation {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  background: #202427;
 }
 
 .model-window figcaption {

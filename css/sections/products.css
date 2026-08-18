@@ -61,6 +61,29 @@
   background: var(--soft);
 }
 
+.product-media.content-carousel {
+  display: block;
+  aspect-ratio: auto;
+}
+
+.product-carousel .content-carousel__viewport {
+  aspect-ratio: 4 / 3;
+}
+
+.product-carousel .content-carousel__status {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 3;
+  padding: 5px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 7px;
+  background: rgba(23, 25, 27, 0.76);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+  color: white;
+  line-height: 1.1;
+}
+
 .product-content {
   display: flex;
   min-height: 260px;
@@ -87,15 +110,42 @@
 
 .sizes li {
   flex: 0 0 auto;
-  padding: 3px 8px;
-  border: 1px solid var(--yellow);
-  border-radius: 6px;
-  font-size: 0.76rem;
-  font-weight: 800;
 }
 
-.product-media img {
+.sizes button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 6px 10px;
+  border: 1px solid var(--yellow);
+  border-radius: 6px;
+  background: white;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.76rem;
+  font-weight: 800;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.sizes button:hover {
+  background: #fff8e4;
+  border-color: var(--yellow-dark);
+}
+
+.sizes button.is-active {
+  transform: translateY(-1px);
+  border-color: var(--ink);
+  background: var(--yellow);
+  box-shadow: inset 0 0 0 1px var(--ink), 0 4px 10px rgba(23, 25, 27, 0.16);
+}
+
+.product-media:not(.content-carousel) img {
   transition: transform 250ms ease;
+}
+
+.product-carousel .content-carousel__slide {
+  padding: 4px;
+  object-fit: contain;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -105,14 +155,19 @@
     box-shadow: 0 16px 34px rgba(25, 28, 30, 0.13);
   }
 
-  .product-card:hover .product-media img {
+  .product-card:hover .product-media:not(.content-carousel) img {
     transform: scale(1.03);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .product-card,
-  .product-media img {
+  .product-media:not(.content-carousel) img,
+  .sizes button {
     transition: none;
+  }
+
+  .sizes button.is-active {
+    transform: none;
   }
 }
